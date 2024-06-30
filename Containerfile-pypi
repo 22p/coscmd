@@ -1,0 +1,6 @@
+FROM python:3.6-alpine
+
+RUN pip install coscmd \
+    && rm -rf ~/.cache/pip
+
+ENTRYPOINT ["/usr/local/bin/coscmd"]
